@@ -1,4 +1,11 @@
-<div class="message">
-  <h2 class="message-header">Messagem do Sistema:</h2>
-  <button class="clear"></button>
+<div class="message" *ngIf="messageService.message">
+  <div class="message-header">
+    <h2>Messagem do Sistema:</h2>
+    <button class="clear">
+      <fa-icon [icon]="faTimes"></fa-icon>
+    </button>
+  </div>
+  <p>
+    {{ messageService.message }}
+  </p>
 </div>
