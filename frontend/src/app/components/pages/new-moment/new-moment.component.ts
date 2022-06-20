@@ -19,7 +19,7 @@ export class NewMomentComponent implements OnInit {
     const formData = new FormData();
 
     formData.append('title', moment.title);
-    formData.append('description', moment?.description);
+    formData.append('description', moment.description);
 
     if (moment.image) {
       formData.append('image', moment.image);
