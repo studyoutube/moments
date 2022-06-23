@@ -1,3 +1,4 @@
+import { MomentComponent } from './components/pages/moment/moment.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/pages/about/about.component';
@@ -8,6 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'moments/new', component: NewMomentComponent },
+  { path: 'moments/:id', component: MomentComponent },
 ];
 
 @NgModule({
