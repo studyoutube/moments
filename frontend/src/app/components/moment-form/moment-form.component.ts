@@ -22,9 +22,15 @@ export class MomentFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.momentForm = new UntypedFormGroup({
-      id: new UntypedFormControl(''),
-      title: new UntypedFormControl('', [Validators.required]),
-      description: new UntypedFormControl('', [Validators.required]),
+      id: new UntypedFormControl(this.momentData ? this.momentData.id : ''),
+      title: new UntypedFormControl(
+        this.momentData ? this.momentData.title : '',
+        [Validators.required]
+      ),
+      description: new UntypedFormControl(
+        this.momentData ? this.momentData.description : '',
+        [Validators.required]
+      ),
       image: new UntypedFormControl(''),
     });
   }
