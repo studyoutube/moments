@@ -46,7 +46,5 @@ export class EditMomentComponent implements OnInit {
     this.messagesService.add(`Momento ${id} foi atualizado com sucesso!`);
 
     this.router.navigate(['/']);
-
-    // beautiful woman japanese
   }
 }
